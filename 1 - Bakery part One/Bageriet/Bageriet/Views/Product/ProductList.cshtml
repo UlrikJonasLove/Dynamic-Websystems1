@@ -1,0 +1,18 @@
+﻿@model ProductListViewModel
+@{
+    ViewData["Title"] = "Produkter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Produkter</h2>
+<nav>
+<a href="~/../Home/Index.cshtml">Hem</a>
+</nav>
+<ul>
+    @foreach (var product in Model.Products)
+    {
+        <li>
+            <h3>@product.Name</h3>
+        </li>
+    }
+</ul>
